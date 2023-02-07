@@ -1,5 +1,5 @@
 
-  import api from "./api.js";
+import api from "./api.js";
 import LoadMoreBtn from "./loadMore.js";
 import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
