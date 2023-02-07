@@ -2,7 +2,7 @@
 const axios = require('axios').default;
 
 const API_URL = "https://pixabay.com/api/";
-const API_KEY = "33338656-15c8519595d06b8db6a463933";
+const API_KEY = "33372794-081d1fa879bae651f1e0d4c06";
 
 
 
