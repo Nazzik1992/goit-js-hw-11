@@ -43,6 +43,7 @@ async function onSubmit (e) {
     
     try {
       const hits = await api.getImage(inputValue, page);
+      
 
       if (hits.length === 0 )  { Notiflix.Notify.info("Sorry, there are no images matching your search query. Please try again.");
     };
@@ -50,11 +51,7 @@ async function onSubmit (e) {
     const markup = hits.reduce(
       (markup, hit) => createMarkup(hit) + markup, "" 
       );
-     let totalHits = hits.totalHits;
-      if (totalHits <= hits.length) 
-        { Notiflix. Notify.info("We're sorry, but you've reached the end of search results.");
-        showMoreBtnEl.hide();
-    };
+    
       
     
 
@@ -120,7 +117,12 @@ async function onLoadMoreBtnClick () {
  const markup = hits.reduce(
   (markup, hit) => createMarkup(hit) + markup, "" 
   );
+  const totalHits = hits.totalHits;
+   if (totalHits <= hits.length) 
+     { Notiflix. Notify.info("We're sorry, but you've reached the end of search results.");
+    
+ };
 
 
   updateImagesList(markup);
-}
+};
