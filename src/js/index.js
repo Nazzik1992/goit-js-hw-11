@@ -25,6 +25,8 @@ formEl.addEventListener("submit", onSubmit);
 
 const galeryEl = document.querySelector('.gallery');
 
+loadMoreBtn.hide();
+
 async function onSubmit (e) {
     e.preventDefault();
     page = 1;
@@ -71,7 +73,7 @@ function  createMarkup({webformatURL, largeImageURL, tags, likes, views, comment
  return `
 <div class="photo-card">
 <a class="thumb" href ="${largeImageURL}">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" width="420" height="320"/>
+  <img src="${webformatURL}" alt="${tags}" loading="lazy" width="320" height="240"/>
   </a>
   <div class="info">
     <p class="info-item">

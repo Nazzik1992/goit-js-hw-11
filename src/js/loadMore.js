@@ -1,12 +1,12 @@
 export default class LoadMoreBtn {
     constructor({ selector, isHidden = false }) {
-      this.button = this.getButton(selector);
+      this.button = this.getBtn(selector);
   
       isHidden && this.hide();
       
     }
   
-    getButton(selector) {
+    getBtn(selector) {
       return document.querySelector(selector);
     }
   
@@ -17,14 +17,14 @@ export default class LoadMoreBtn {
   
     disable() {
       this.button.disabled = true;
-      this.button.textContent = "Loading...";
+      
     }
   
     hide() {
-      this.button.classList.add("hidden");
+      this.button.classList.add("is-hidden");
     }
   
     show() {
-      this.button.classList.remove("hidden");
+      this.button.classList.remove("is-hidden");
     }
   }
